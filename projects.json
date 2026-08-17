@@ -1,0 +1,50 @@
+{
+  "owner": {
+    "name": "deuce",
+    "tagline": "AI浪花里的一只产品经理，还想再多做点东西，欢迎来戳",
+    "avatar": "./assets/avatar.jpg"
+  },
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/chenerzhong123-cloud" }
+  ],
+  "projects": [
+    {
+      "key": "deathplaylist",
+      "title": "死亡歌单",
+      "desc": "用歌单纪念逝去之人",
+      "cover": "./assets/covers/deathplaylist.png",
+      "url": "/deathplaylist/"
+    },
+    {
+      "key": "htmlgenius",
+      "title": "HTML Genius",
+      "desc": "在网页上批注、协作、AI 增强",
+      "cover": "./assets/covers/htmlgenius.png",
+      "url": "/htmlgenius/"
+    },
+    {
+      "key": "lennyspodcast",
+      "title": "Lenny's Podcast",
+      "desc": "Lenny 播客中文翻译",
+      "cover": "./assets/covers/lennyspodcast.png",
+      "url": "/lennyspodcast/"
+    },
+    {
+      "key": "opencode",
+      "title": "OpenCode 学习",
+      "desc": "OpenCode 源码阅读路线与笔记",
+      "cover": "./assets/covers/opencode.png",
+      "url": "/opencode/"
+    },
+    {
+      "key": "airesearch",
+      "title": "AI Research Relay",
+      "desc": "AI 研究、模型与 agent 工作流的中文速览与双语精选",
+      "cover": "./assets/covers/airesearch.png",
+      "url": "/airesearch/"
+    }
+  ],
+  "updates": [
+    { "date": "2026-07-20", "text": "站点门户化重构：首页 + 四个子项目" }
+  ]
+}
