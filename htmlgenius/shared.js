@@ -79,11 +79,11 @@
     var featureCopy = zh ? [
       ['就在 Chrome 中<br><span class="gradient">就在你想修改的地方</span>', '无需导出，无需上传，也无需在源码中反复摸索。你看到什么，就直接在原处修改什么。'],
       ['如往常一样批注<br><span class="gradient">剩下的交给 Agent</span>', '在最需要的上下文中，准确说出你的想法。行内批注为 AI 提供足够细节，让它无缝完成后续工作。'],
-      ['让批注只停留在<br><span class="gradient">你的团队之内</span>', '只与真正需要的人共享反馈，不让信息外泄。通过飞书或 Google 账号自然登录，让每个决策保持连续。']
+      ['让批注只停留在<br><span class="gradient">你的团队之内</span>', '只与真正需要的人共享反馈，不让信息外泄。登录后，让每个决策持续沉淀在正确的团队中。']
     ] : [
       ['Right inside Chrome<br><span class="gradient">Right on the point</span>', 'No exports. No uploads. No wrestling with source code. Change the words and structure you see, right where they live.'],
       ['Comment your thoughts<br><span class="gradient">Let the Agent do the rest</span>', 'Say exactly what you mean, in the context where it matters. Inline annotations give your AI the details it needs to complete the task seamlessly.'],
-      ['Keep comments<br><span class="gradient">within your team</span>', 'Share feedback with the people who need it—and no one else. Sign in naturally with your Lark or Google account, then keep every decision connected.']
+      ['Keep comments<br><span class="gradient">within your team</span>', 'Share feedback with the people who need it—and no one else. Sign in to keep every decision connected and visible only to the right team.']
     ];
     document.querySelectorAll('main > .section:not(#workflow)').forEach(function (section, index) {
       var title = section.querySelector('.feature-copy h2');
@@ -183,7 +183,7 @@
     agentGrid.insertAdjacentHTML('beforeend', '<article class="agent-card"><div class="card-label" data-zh="同样支持" data-en="ALSO SUPPORTED">同样支持</div><h2>GitHub Copilot</h2><p class="agent-meta" data-zh="通过本机已登录的 Copilot CLI 执行" data-en="Runs through your locally signed-in Copilot CLI">通过本机已登录的 Copilot CLI 执行</p><div class="capability-list"><div><i>✓</i><span data-zh="复用本机 Copilot 登录态，不读取或保存凭据" data-en="Reuses your local Copilot sign-in without reading or saving credentials">复用本机 Copilot 登录态，不读取或保存凭据</span></div><div><i>✓</i><span data-zh="受控工作区内只写候选版本" data-en="Writes only the candidate inside a controlled workspace">受控工作区内只写候选版本</span></div><div><i>✓</i><span data-zh="过程可见，随时可以终止任务" data-en="Progress stays visible and the task can be stopped anytime">过程可见，随时可以终止任务</span></div></div><a class="button ghost" href="https://docs.github.com/en/copilot" target="_blank" rel="noreferrer" data-zh="了解 Copilot ↗" data-en="About Copilot ↗">了解 Copilot ↗</a></article>');
     setLanguage(language);
   }
-  var bridgeVersion = '1.0.6';
+  var bridgeVersion = '1.0.11';
   var officialExtensionId = 'fcapmgclnpiljjlcaficmjjclkaepaon';
   var setupPromptZh = '请只帮我初始化 HTML Genius 的本地连接，不要修改任何项目文件、HTML 文件或 Agent 配置。\n\n用户已明确授权你在“当前用户目录”安装/修复 HTML Genius Local Bridge；不要请求管理员权限，不要安装或登录任何 Agent，不要读取历史会话、密钥、Cookie 或项目文件。\n\nChrome Extension ID：' + officialExtensionId + '\n需要的 Bridge 版本：' + bridgeVersion + '\n\n请按顺序执行：\n1. 先运行只读检查：\n   npx --yes @htmlgenius/bridge@' + bridgeVersion + ' doctor --json --extension-id ' + officialExtensionId + '\n2. 若检查显示 Bridge 未安装、损坏或需要修复，运行：\n   npx --yes @htmlgenius/bridge@' + bridgeVersion + ' setup --json --scope user --extension-id ' + officialExtensionId + '\n3. 再运行一次 doctor。\n\n最后只用简短中文汇报：Bridge 是否已就绪；哪些已支持 Agent 可用；哪些仍需要我自行登录或更新。不要输出绝对路径、token、会话信息或原始日志。';
   var setupPromptEn = 'Only initialize the local connection for HTML Genius; do not modify any project files, HTML files, or Agent configuration.\n\nThe user has explicitly authorized you to install/repair the HTML Genius Local Bridge in the current user\'s home directory. Do not request admin privileges, do not install or sign in to any Agent, and do not read past sessions, keys, cookies, or project files.\n\nChrome Extension ID: ' + officialExtensionId + '\nRequired Bridge version: ' + bridgeVersion + '\n\nRun in order:\n1. Read-only check first:\n   npx --yes @htmlgenius/bridge@' + bridgeVersion + ' doctor --json --extension-id ' + officialExtensionId + '\n2. If Bridge is not installed, corrupt, or needs repair, run:\n   npx --yes @htmlgenius/bridge@' + bridgeVersion + ' setup --json --scope user --extension-id ' + officialExtensionId + '\n3. Run doctor once more.\n\nFinally, briefly report whether Bridge is ready, which supported Agents are available, and which still need me to sign in or update. Do not output absolute paths, tokens, session info, or raw logs.';
